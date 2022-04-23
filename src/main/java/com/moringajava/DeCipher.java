@@ -9,7 +9,7 @@ public class DeCipher {
         for (int i=0; i<message.length(); i++) {
             if (message.charAt(i) != ' ') {
                 int currentChar = alphabet.indexOf(message.charAt(i));
-                int newIndex = currentChar + offset;
+                int newIndex = currentChar - offset;
                 if (newIndex < 0) {
                     newIndex = 26 + newIndex;
                 }
