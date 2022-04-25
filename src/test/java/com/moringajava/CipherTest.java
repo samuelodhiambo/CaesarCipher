@@ -8,9 +8,9 @@ class CipherTest {
     @Test
     public void run_cipher_test(){
         Cipher cipher = new Cipher();
-        DeCipher deCipher = new DeCipher();
-        String input = "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG".toLowerCase();
-        String expectedOutput = cipher.encode(input, 20);
-        assertEquals(deCipher.decode(expectedOutput, 20), input);
+        String input = "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG";
+        String cipherText = cipher.encode(input, 20);
+        String expectedOutput = "nby kocwe vliqh zir dogjm ipyl nby futs xia";
+        assertEquals(expectedOutput, cipherText);
     }
 }
